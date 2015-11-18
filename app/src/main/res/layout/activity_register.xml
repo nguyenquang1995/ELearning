@@ -1,0 +1,160 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.hacks_000.myapplication.UpdateProfile">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/button_custom"
+        android:layout_marginBottom="20dp" >
+
+
+        <Button
+            android:id="@+id/cancel_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:text="Cancel"
+            android:textColor="@android:color/white" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="8dp"
+            android:text="Register"
+            android:textColor="@android:color/white"
+            android:textSize="25dp" />
+
+        <Button
+            android:id="@+id/update_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="Update"
+            android:textColor="@android:color/white" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp" >
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/email_icon"
+            android:id="@+id/email_icon"/>
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/input_layout_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/email_icon">
+            <EditText
+                android:id="@+id/input_email"
+                android:inputType="textEmailAddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/hint_email"
+                android:required="true"/>
+
+        </android.support.design.widget.TextInputLayout>
+
+        <!-- Password-->
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/lock_icon"
+            android:id="@+id/password_icon"
+            android:layout_below="@+id/input_layout_email"/>
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/input_layout_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/password_icon"
+            android:layout_marginTop="20dp">
+            <EditText
+                android:id="@+id/input_password"
+                android:inputType="textPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/hint_password"
+                android:required="true" />
+
+        </android.support.design.widget.TextInputLayout>
+
+        <!-- Retype password-->
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/lock_icon"
+            android:id="@+id/retype_password_icon"
+            android:layout_below="@+id/input_layout_password"/>
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/input_layout_retype_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/retype_password_icon"
+            android:layout_marginTop="20dp">
+            <EditText
+                android:id="@+id/input_retype_password"
+                android:inputType="textPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/hint_retype_password"
+                android:required="true" />
+        </android.support.design.widget.TextInputLayout>
+
+        <!-- Full name-->
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/full_name_icon"
+            android:id="@+id/full_name_icon"
+            android:layout_below="@+id/input_layout_retype_password"/>
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/input_layout_full_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/full_name_icon"
+            android:layout_marginTop="20dp">
+            <EditText
+                android:id="@+id/input_full_name"
+                android:inputType="textPersonName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/hint_name"
+                android:required="true" />
+        </android.support.design.widget.TextInputLayout>
+
+        <!-- avatar-->
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/avatar_icon"
+            android:id="@+id/avatar_icon"
+            android:layout_below="@+id/input_layout_full_name" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/avatar_text"
+            android:layout_below="@+id/input_layout_full_name"
+            android:layout_toRightOf="@+id/avatar_icon" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/avatar_default"
+            android:id="@+id/avatar_default"
+            android:layout_below="@+id/input_layout_full_name"
+            android:layout_alignParentRight="true"/>
+
+    </RelativeLayout>
+
+</LinearLayout>
