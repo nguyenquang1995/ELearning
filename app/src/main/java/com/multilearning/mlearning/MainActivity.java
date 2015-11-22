@@ -2,14 +2,15 @@ package com.multilearning.mlearning;
 
 import android.app.Fragment;
 import android.app.FragmentManager;
+import android.content.Intent;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.view.Menu;
-import android.view.MenuItem;
+import android.view.KeyEvent;
 
+import com.multilearning.mlearning.model.User;
 import com.multilearning.mlearning.navigationdrawer.NavigationDrawerCallbacks;
 import com.multilearning.mlearning.navigationdrawer.NavigationDrawerFragment;
 
@@ -23,6 +24,10 @@ public class MainActivity extends AppCompatActivity
     private NavigationDrawerFragment mNavigationDrawerFragment;
     private Toolbar mToolbar;
 
+    private User user;
+
+    private boolean pressed = false;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,10 +39,14 @@ public class MainActivity extends AppCompatActivity
         mNavigationDrawerFragment = (NavigationDrawerFragment)
                 getFragmentManager().findFragmentById(R.id.fragment_drawer);
 
+        user = new User();
+
+        getInfoUser();
+
         // Set up the drawer.
         mNavigationDrawerFragment.setup(R.id.fragment_drawer, (DrawerLayout) findViewById(R.id.drawer), mToolbar);
         // populate the navigation drawer
-        mNavigationDrawerFragment.setUserData("John Doe", "johndoe@doe.com", BitmapFactory.decodeResource(getResources(), R.drawable.avatar));
+        mNavigationDrawerFragment.setUserData(user.getName(), user.getEmail(), BitmapFactory.decodeResource(getResources(), R.drawable.avatar));
 
         mNavigationDrawerFragment.SignOut();
 
@@ -74,24 +83,24 @@ public class MainActivity extends AppCompatActivity
             super.onBackPressed();
     }
 
-
     @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        if (!mNavigationDrawerFragment.isDrawerOpen()) {
-            // Only show items in the action bar relevant to this screen
-            // if the drawer is not showing. Otherwise, let the drawer
-            // decide what to show in the action bar.
-            getMenuInflater().inflate(R.menu.main, menu);
-            return true;
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+        if (keyCode == KeyEvent.KEYCODE_BACK) {
+
         }
-        return super.onCreateOptionsMenu(menu);
+
+        return super.onKeyDown(keyCode, event);
     }
 
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-
-        return true;
+    public User getUser() {
+        return user;
     }
 
+    private void getInfoUser(){
+        Intent intent = getIntent();
+        Bundle bundle = intent.getBundleExtra("user");
+
+        user = (User) bundle.getSerializable("info_user");
+    }
 
 }

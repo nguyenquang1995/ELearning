@@ -10,8 +10,7 @@
         android:layout_height="50dp"
         android:background="@drawable/button_custom"
         android:layout_marginBottom="20dp" >
-
-
+        
         <Button
             android:background="@drawable/button_custom"
             android:id="@+id/cancel_button"
@@ -19,7 +18,8 @@
             android:layout_height="wrap_content"
             android:layout_alignParentLeft="true"
             android:text="Cancel"
-            android:textColor="@android:color/white" />
+            android:textColor="@android:color/white"
+            android:onClick="onClick"/>
 
         <TextView
             android:layout_width="wrap_content"
@@ -37,7 +37,8 @@
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
             android:text="Done"
-            android:textColor="@android:color/white" />
+            android:textColor="@android:color/white"
+            android:onClick="onClick"/>
 
     </RelativeLayout>
 
@@ -150,9 +151,10 @@
             android:layout_toRightOf="@+id/avatar_icon" />
 
         <ImageView
+            android:onClick="onClick"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/avatar_default"
+            android:src="@drawable/avatar"
             android:id="@+id/avatar_default"
             android:layout_below="@+id/input_layout_full_name"
             android:layout_alignParentRight="true"/>

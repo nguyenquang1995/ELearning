@@ -12,33 +12,38 @@
 
 
         <Button
-            android:id="@+id/cancel_button"
+            android:id="@+id/btCancel"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:background="@drawable/button_custom"
             android:layout_alignParentLeft="true"
             android:text="Back"
+            android:textSize="14sp"
             android:textColor="@android:color/white" />
 
         <TextView
+            android:id="@+id/tvTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="8dp"
-            android:text="Basic Lesson"
             android:textColor="@android:color/white"
             android:textSize="25dp" />
 
         <Button
-            android:id="@+id/update_button"
+            android:id="@+id/btUpdate"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
+            android:background="@drawable/button_custom"
             android:text="Done"
+            android:textSize="14sp"
             android:textColor="@android:color/white" />
 
     </RelativeLayout>
 
     <TextView
+        android:id="@+id/tvNumber"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
@@ -54,19 +59,20 @@
             android:layout_height="50dp"
             android:gravity="center"
             android:layout_marginTop="50dp"
-            android:layout_marginLeft="70dp"
             android:orientation="horizontal">
 
             <TextView
+                android:id="@+id/tvQuestion"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:text="Tôi là người Việt Nam!" />
+                android:text="Tôi là người Việt Nam!"
+                android:textSize="25sp" />
 
-            <ImageView
+            <!--<ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/play" />
+                android:src="@drawable/play" />-->
 
         </LinearLayout>
 
@@ -78,24 +84,39 @@
             android:orientation="vertical">
 
             <Button
+                android:id="@+id/btChosse1"
                 android:layout_width="250dp"
                 android:layout_height="match_parent"
-                android:text="Vietnamese"/>
+                android:text="Vietnamese"
+                android:textColor="@android:color/white"
+                android:background="@color/colorPrimary"/>
 
             <Button
+                android:id="@+id/btChosse2"
                 android:layout_width="250dp"
                 android:layout_height="match_parent"
-                android:text="Vietnamese"/>
+                android:layout_marginTop="10dp"
+                android:text="Vietnamese"
+                android:textColor="@android:color/white"
+                android:background="@color/colorPrimary"/>
 
             <Button
+                android:id="@+id/btChosse3"
                 android:layout_width="250dp"
                 android:layout_height="match_parent"
-                android:text="Vietnamese"/>
+                android:layout_marginTop="10dp"
+                android:text="Vietnamese"
+                android:textColor="@android:color/white"
+                android:background="@color/colorPrimary"/>
 
             <Button
+                android:id="@+id/btChosse4"
                 android:layout_width="250dp"
                 android:layout_height="match_parent"
-                android:text="Vietnamese"/>
+                android:layout_marginTop="10dp"
+                android:text="Vietnamese"
+                android:textColor="@android:color/white"
+                android:background="@color/colorPrimary"/>
 
         </LinearLayout>
 

@@ -13,6 +13,8 @@
 
 
         <Button
+            android:onClick="onClick"
+            android:background="@drawable/button_custom"
             android:id="@+id/cancel_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -30,6 +32,8 @@
             android:textSize="25dp" />
 
         <Button
+            android:onClick="onClick"
+            android:background="@drawable/button_custom"
             android:id="@+id/update_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -68,36 +72,12 @@
 
         </android.support.design.widget.TextInputLayout>
 
-        <!--Old Password-->
-        <ImageView
-            android:id="@+id/old_password_icon"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/input_layout_email"
-            android:src="@drawable/lock_icon" />
-
-        <android.support.design.widget.TextInputLayout
-            android:id="@+id/input_layout_old_password"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/old_password_icon"
-            android:layout_marginTop="0dp">
-
-            <EditText
-                android:id="@+id/input_old_password"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="@string/hint_old_password"
-                android:inputType="textPassword"
-                android:required="true" />
-        </android.support.design.widget.TextInputLayout>
-
         <!--New Password-->
         <ImageView
             android:id="@+id/password_icon"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/input_layout_old_password"
+            android:layout_below="@+id/input_layout_email"
             android:src="@drawable/lock_icon" />
 
         <android.support.design.widget.TextInputLayout
@@ -181,12 +161,13 @@
             android:text="@string/avatar_text" />
 
         <ImageView
+            android:onClick="onClick"
             android:id="@+id/avatar_default"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
             android:layout_below="@+id/input_layout_full_name"
-            android:src="@drawable/avatar_default" />
+            android:src="@drawable/avatar" />
 
     </RelativeLayout>
 

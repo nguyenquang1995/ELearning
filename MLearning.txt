@@ -1,0 +1,18 @@
+- homepage: https://protected-earth-1676.herokuapp.com/
+- api login: https://protected-earth-1676.herokuapp.com/login.json
+	para: session[email], session[password]
+- api register: https://protected-earth-1676.herokuapp.com/users.json
+	para: user[name], user[email], user[password], user[password_confirmation].
+- List all lessons API
+https://protected-earth-1676.herokuapp.com/users/5/lessons.json
+method: GET
+(5 là id của user)
+- Create lesson API 
+https://protected-earth-1676.herokuapp.com/users/5/lessons.json
+method: POST
+params: lesson: {category_id: integer, user_id: integer}
+
+- List all categories
+https://protected-earth-1676.herokuapp.com/categories.json
+
+method: GET

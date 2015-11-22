@@ -18,15 +18,15 @@
     <string name="pdf">PDF</string>
 
     <string-array name="list_level">
-        <item>All</item>
-        <item>Basic</item>
-        <item>Advance</item>
-        <item>Expert</item>
+        <item>all</item>
+        <item>basic</item>
+        <item>advance</item>
+        <item>expert</item>
     </string-array>
 
     <string-array name="list_status">
-        <item>All</item>
-        <item>Learned</item>
-        <item>Not learn</item>
+        <item>all</item>
+        <item>learned</item>
+        <item>not learned</item>
     </string-array>
 </resources>
