@@ -121,8 +121,6 @@ public class HomeFragment extends Fragment {
                 }
             }
 
-            /*for (int i = 0; i < listLessonLearned.size(); i++)
-                Log.d("demo: ", listLessonLearned.get(i).getTitleLesson() + " : " + listLessonLearned.get(i).getLessonId());*/
             adapterLesson = new LessonAdapter(getActivity(), listLessonLearned);
             lvLesson.setAdapter(adapterLesson);
         }

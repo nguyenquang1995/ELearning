@@ -116,6 +116,7 @@ public class DetailLessonActivity extends AppCompatActivity implements View.OnCl
             finish();
         }
         if (v.getId() == R.id.btUpdate) {
+            finish();
             Intent intent = new Intent(DetailLessonActivity.this, ResultActivity.class);
 
             intent.putExtra("result", listResult);
@@ -134,6 +135,7 @@ public class DetailLessonActivity extends AppCompatActivity implements View.OnCl
         } else {
             checkAnswer();
 
+            finish();
             Intent intent = new Intent(DetailLessonActivity.this, ResultActivity.class);
 
             intent.putExtra("result", listResult);
